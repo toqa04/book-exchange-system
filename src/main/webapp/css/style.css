@@ -1,0 +1,194 @@
+
+:root {
+  --bg-main: #f7f5f2;        
+  --bg-accent: #efe8df;
+  --card-bg: #ffffff;
+
+  --primary-color: #6b4f3f;
+  --secondary-color: #d8c4b2;
+
+  --text-color: #2b1f19;
+  --text-muted: #7a6a60;
+  --border-color: #e3d8cf;
+}
+
+
+/* ===============================
+   Body & Container
+================================ */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-color);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* ===============================
+   Navbar
+================================ */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 18px 42px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--primary-color) !important;
+  letter-spacing: .5px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar .nav-link {
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--text-color) !important;
+  padding: .5rem 1.1rem;
+  border-radius: 8px;
+  transition: all .25s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary-color) !important;
+  background-color: rgba(47,111,78,.08);
+}
+
+/* ===============================
+   Cards
+================================ */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.035);
+  margin-bottom: 32px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.06);
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.25rem 1.75rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  padding: 1.8rem;
+}
+
+/* ===============================
+   Forms
+================================ */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: .65rem .9rem;
+  font-size: .95rem;
+  transition: all .2s ease;
+}
+
+.form-control::placeholder {
+  color: #9aa8a0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 .15rem rgba(47,111,78,.18);
+}
+
+/* ===============================
+   Buttons
+================================ */
+.btn {
+  border-radius: 10px;
+  padding: .6rem 1.4rem;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #265a3f;
+  border-color: #265a3f;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #1f2a24;
+}
+
+.btn-secondary:hover {
+  background-color: #96b7a6;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(47,111,78,.1);
+}
+
+/* ===============================
+   Tables
+================================ */
+.table {
+  color: var(--text-color);
+  font-size: .95rem;
+}
+
+.table th {
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table td {
+  border-top: 1px solid #eef2ef;
+}
+
+/* ===============================
+   Alerts
+================================ */
+.alert {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+}
+
+/* ===============================
+   Modals
+================================ */
+.modal-content {
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 14px;
+}
+

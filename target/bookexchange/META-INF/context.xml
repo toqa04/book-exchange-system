@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/bookexchange">
+  <Resource auth="Container" driverClassName="org.postgresql.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/BookExchangeDB" password="postgres" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/bookexchange" username="postgres"/>
+</Context>

@@ -1,0 +1,209 @@
+/* Stable UI Theme (Bootstrap-friendly)
+   هدفه: ما تختفي الأزرار ولا تتغيّر الألوان فجأة
+*/
+:root{
+  --bg-1:#061524;
+  --bg-2:#0b2842;
+  --glass: rgba(255,255,255,.07);
+  --glass-2: rgba(255,255,255,.10);
+  --border: rgba(255,255,255,.14);
+  --text: rgba(255,255,255,.97);
+  --muted: rgba(255,255,255,.82);
+
+  /* يخلّي عناصر الفورم الافتراضية (خصوصاً قائمة الـ select) تاخذ Dark UI
+     بدل ما تكون القائمة بيضا والنص أبيض (وبالتالي "الخيارات بتختفي") */
+  color-scheme: dark;
+}
+
+html, body { height: 100%; }
+body{
+  min-height:100vh;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(77,138,255,.18), transparent 60%),
+              radial-gradient(900px 500px at 100% 0%, rgba(214,82,255,.14), transparent 55%),
+              linear-gradient(180deg, var(--bg-1), var(--bg-2));
+}
+
+a { color: rgba(255,255,255,.92); }
+a:hover { color: #ffffff; }
+
+/* Stronger text contrast */
+.form-label{ color: rgba(255,255,255,.95); font-weight: 600; }
+.small, small{ color: rgba(255,255,255,.78); }
+.alert-link{ color: rgba(154,209,255,.98) !important; text-decoration: underline; }
+.alert-link:hover{ color: #ffffff !important; }
+
+
+/* Container spacing */
+.container{ padding-top: 18px; padding-bottom: 28px; }
+
+/* Navbar */
+.navbar{
+  background: linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.20)) !important;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+}
+.navbar .navbar-brand{ font-weight: 700; letter-spacing: .2px; }
+.navbar .nav-link{
+  color: rgba(255,255,255,.9) !important;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  margin: .15rem .25rem;
+  background: rgba(255,255,255,.05);
+}
+.navbar .nav-link:hover{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.28);
+}
+.navbar .navbar-toggler{
+  border-color: rgba(255,255,255,.25);
+}
+.navbar .navbar-toggler-icon{
+  filter: invert(1);
+}
+
+/* Cards / panels */
+.card{
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.28);
+}
+.card-header{
+  background: rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  color: var(--text);
+}
+.card-title, h1, h2, h3, h4{ color: var(--text); }
+.text-muted{ color: var(--muted) !important; }
+
+/* Forms */
+.form-control, .form-select{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.18);
+  color: var(--text);
+}
+
+.form-control::placeholder{ color: rgba(255,255,255,.70); }
+.form-control:focus, .form-select:focus{
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.35);
+  box-shadow: 0 0 0 .2rem rgba(77,138,255,.18);
+  color: var(--text);
+}
+
+/* Fix: Dropdown options visibility (Windows/Edge/Chrome)
+   بعض المتصفحات بتفتح قائمة الـ select بخلفية بيضا حتى لو الـ select نفسه غامق.
+   مع color-scheme: dark فوق، هذا غالباً ينحل، وهنا fallback إضافي. */
+select.form-select, select.form-control{
+  color-scheme: dark;
+}
+select.form-select option,
+select.form-control option,
+select.form-select optgroup,
+select.form-control optgroup{
+  background-color: #0b2842;
+  color: rgba(255,255,255,.92);
+}
+select.form-select option:disabled,
+select.form-control option:disabled{
+  color: rgba(255,255,255,.55);
+}
+
+/* Bootstrap modal: خليها نفس الثيم الغامق عشان النصوص والحقول تبين */
+.modal-content{
+  background: rgba(6, 21, 36, .96);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  color: rgba(255,255,255,.92);
+}
+.modal-header,
+.modal-footer{
+  border-color: rgba(255,255,255,.12);
+}
+.modal .form-control,
+.modal .form-select{
+  background: rgba(255,255,255,.08);
+}
+.modal .btn-close{
+  filter: invert(1) grayscale(100%);
+}
+
+/* Buttons visibility */
+.btn{ border-radius: 12px; }
+.btn-outline-light{
+  color: rgba(255,255,255,.92);
+  border-color: rgba(255,255,255,.45);
+}
+.btn-outline-light:hover{
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.65);
+}
+.btn-primary{
+  background: rgba(46, 120, 255, .95);
+  border-color: rgba(46, 120, 255, .95);
+}
+.btn-danger{
+  background: rgba(220, 53, 69, .95);
+  border-color: rgba(220, 53, 69, .95);
+}
+
+/* Tables */
+.table{
+  color: var(--text);
+}
+.table thead th{
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.9);
+}
+.table td, .table th{
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+  --bs-table-accent-bg: rgba(255,255,255,.04);
+  color: var(--text);
+}
+
+/* Badges */
+.badge{
+  border: 1px solid rgba(255,255,255,.20);
+}
+
+/* Alerts */
+.alert{
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+}
+
+/* Bootstrap Modals (كانوا أبيض، فالنص الأبيض ما كان يبين)
+   بنخليهم نفس ثيم الصفحة */
+.modal-content{
+  background: rgba(6,21,36,.96);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--text);
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+}
+.modal-header, .modal-footer{
+  border-color: rgba(255,255,255,.12);
+}
+.modal-title{ color: var(--text); }
+.modal .form-control, .modal .form-select{
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.20);
+  color: var(--text);
+}
+.form-control::placeholder{ color: rgba(255,255,255,.70); }
+.modal .btn-close{
+  filter: invert(1);
+  opacity: .9;
+}
+
+/* Footer */
+footer{
+  color: rgba(255,255,255,.7);
+}
