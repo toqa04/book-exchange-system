@@ -66,8 +66,3 @@ Deploy the project on Apache Tomcat or any compatible servlet container
 
 Access the application at
 http://localhost:8080/bookexchange
-
-## **Done by:**
-* Khaled Ghaleb Diab Khader (161010)
-* Ammar Abd-Almoneim Youssef Sakhrieh (165327)
-* Toqah Ayman Ahmad Al-Zubi (160838)
