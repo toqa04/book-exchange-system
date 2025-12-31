@@ -64,5 +64,3 @@ src/main/java/com/bookexchange/util/DBConnection.java
 
 Deploy the project on Apache Tomcat or any compatible servlet container
 
-Access the application at
-http://localhost:8080/bookexchange
